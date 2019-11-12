@@ -10,9 +10,12 @@
     "bin": {
         "icetools": "./bin/run.js"
     },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cneryjr/icetools.git"
+    },
+    "homepage": "https://github.com/cneryjr/icetools#readme",
     "preferGlobal": true,
     "license": "MIT",
-    "dependencies": {
-        "figlet": "^1.2.4"
-    }
+    "dependencies": {}
 }
