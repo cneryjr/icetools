@@ -1,0 +1,15 @@
+{
+    "name": "icetools",
+    "version": "0.1.0",
+    "author": "Nery Jr",
+    "description": "An awesome transpiler from Javascript to Golo lang",
+    "main": "./lib/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "bin": {
+      "dosomethingawesome": "./bin/run.js"
+    },
+    "preferGlobal": true,
+    "license": "MIT"
+}
