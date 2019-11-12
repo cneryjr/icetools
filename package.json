@@ -8,7 +8,8 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "bin": {
-        "icetools": "./bin/run.js"
+        "icerun": "./bin/run.js",
+        "icecompile": "./bin/compile.js"
     },
     "repository": {
         "type": "git",
