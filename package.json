@@ -1,6 +1,6 @@
 {
     "name": "icetools",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "author": "Nery Jr",
     "description": "An awesome transpiler from Javascript to Golo lang",
     "main": "./lib/index.js",
