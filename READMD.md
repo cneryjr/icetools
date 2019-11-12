@@ -10,7 +10,7 @@ A transpiler from Javascript to Golo lang (JVM).
 
 ```shell
 
-    icetools --compile <file_name>
+    icecompile <project_directory>
 
 ```
 
