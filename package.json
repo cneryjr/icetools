@@ -9,7 +9,7 @@
     },
     "bin": {
         "icerun": "./bin/run.js",
-        "icecompile": "./bin/compile.js"
+        "icecompiler": "./bin/compiler.js"
     },
     "repository": {
         "type": "git",
@@ -18,5 +18,11 @@
     "homepage": "https://github.com/cneryjr/icetools#readme",
     "preferGlobal": true,
     "license": "MIT",
-    "dependencies": {}
+    "dependencies": {
+        "@babel/plugin-syntax-optional-chaining": "^7.2.0",
+        "@babel/types": "^7.7.2",
+        "jsesc": "^2.5.2",
+        "lodash": "^4.17.15",
+        "source-map": "^0.7.3"
+    }
 }
