@@ -1,4 +1,6 @@
+#!/usr/bin/env node
 const fs = require('fs')
+const path = require('path')
 const process = require('process')
 const { execSync } = require('child_process')
 const { compiler } = require('./compiler')
@@ -11,11 +13,13 @@ where <action> is one of:
     --init       Set up the the ice project in current directory
     --run        Execute current project
 `
-const icebergJsonExists = () => fs.existsSync('./iceberg.json')
+const icebergJsonExists = (projectDir) => fs.existsSync(path.resolve(projectDir, './iceberg.json'))
 
-const compile = () => { 
-    if (icebergJsonExists()) {
-        compiler(process.cwd())
+const compile = (dir) => { 
+    let projectDir = dir || process.cwd()
+    
+    if (icebergJsonExists(projectDir)) {
+        compiler(projectDir)
     } else {
         console.log(usage)
     }
@@ -35,12 +39,12 @@ const run = () => {
 
 let actions = { compile, init, run }
 
-function main(arguments) {
-    if (arguments.length > 0 && arguments[0].startsWith('--')) {
-        actions[arguments[0].slice(2)]()
+function main(args) {
+    if (args.length > 1 && args[2].startsWith('--')) {
+        actions[args[2].slice(2)](args[3])
     } else {
         console.log(usage)
     }
 }
 
-main(arguments)
+main(process.argv)

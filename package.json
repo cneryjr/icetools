@@ -1,6 +1,6 @@
 {
     "name": "icetools",
-    "version": "0.1.3",
+    "version": "0.1.5",
     "author": "Nery Jr",
     "description": "An awesome transpiler from Javascript to Golo lang",
     "main": "./lib/index.js",
@@ -8,8 +8,7 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "bin": {
-        "icerun": "./bin/run.js",
-        "icecompiler": "./bin/compiler.js"
+        "iceberg": "./bin/iceberg.js"
     },
     "repository": {
         "type": "git",

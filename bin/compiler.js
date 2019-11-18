@@ -42,7 +42,7 @@ const transpile = (rootModule, sourceDir, inputFileName, targetDir) => {
     let outputFileName = `${pathOutputFile}${path.sep}${simpleName}.golo`
 
     // console.log(`NAME(${simpleName}), DIRS(${dirs})`)
-    console.log(`OUTPUT(${outputFileName})`)
+    // console.log(`OUTPUT(${outputFileName})`)
 
     fs.mkdirSync(pathOutputFile, { recursive: true })
     fs.readFile(inputFileName, function (err, data) {
@@ -111,7 +111,7 @@ function getGoloFiles(tmpDir, timeout) {
         // const fileExists = fs.existsSync(file);
         goloFiles = walkSync('.golo', tmpDir)
 
-        console.log('count: ', goloFiles.length)
+        // console.log('count: ', goloFiles.length)
 
         if (goloFiles.length > 0) {
             clearInterval(id);
@@ -145,7 +145,7 @@ exports.compiler = (projectDir) => {
         if (goloFiles.length > 0) {
             let compileCmd = goloFiles.reduce((prev, curr) => `${prev} ${curr}`, `golo compile --output ${jarFileName}`)
         
-            console.log('\n', compileCmd, '\n')        
+            // console.log('\n', compileCmd, '\n')        
             execSync(compileCmd)
             execSync(updateJarCmd)
             deleteManifestFile(projectDir) 

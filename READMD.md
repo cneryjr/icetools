@@ -16,6 +16,7 @@ A transpiler from Javascript to Golo lang (JVM).
 
 ## Release History
 
+* 0.1.4 November/2019 - Implementation transpile .ice (js) to .golo
 * 0.1.3 November/2019 - Fix implementation compile command
 * 0.1.2 November/2019 - Implementation compile command
 * 0.1.1 November/2019 - Initial release
