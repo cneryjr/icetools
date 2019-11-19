@@ -4,6 +4,7 @@ const path = require('path')
 const process = require('process')
 const { execSync } = require('child_process')
 const { compiler } = require('./compiler')
+const { runner } = require('./run')
 
 let arguments = process.argv.slice(2)
 let isWindows = (process.platform == 'win32' || process.platform == 'win64') ? true : false
@@ -15,8 +16,8 @@ where <action> is one of:
 `
 const icebergJsonExists = (projectDir) => fs.existsSync(path.resolve(projectDir, './iceberg.json'))
 
-const compile = (dir) => { 
-    let projectDir = dir || process.cwd()
+const compile = (projectDir) => { 
+    // let projectDir = dir || process.cwd()
     
     if (icebergJsonExists(projectDir)) {
         compiler(projectDir)
@@ -26,12 +27,11 @@ const compile = (dir) => {
 }
 
 const init = () => { 
-
 }
 
-const run = () => { 
-    if (icebergJsonExists()) {
-        
+const run = (projectDir) => { 
+    if (icebergJsonExists(projectDir)) {
+        runner(projectDir)
     } else {
         console.log(usage)
     }
