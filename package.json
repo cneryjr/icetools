@@ -1,12 +1,19 @@
 {
     "name": "icetools",
-    "version": "0.1.8",
+    "version": "0.1.9",
     "author": "Nery Jr",
     "description": "An awesome transpiler from Javascript to Golo lang",
     "main": "./lib/index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
+    "keywords": [
+        "instantaneous",
+        "compact",
+        "expressive",
+        "programming",
+        "language"
+      ],
     "bin": {
         "iceberg": "./bin/iceberg.js"
     },

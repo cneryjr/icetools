@@ -14,13 +14,14 @@ A transpiler from Javascript to Golo lang (JVM).
 
 ```
 
-Where <action> is one of:
+Where ACTION is one of:
     --compile    Compile current project
     --init       Set up the the ice project in current directory
     --run        Execute current project
 
 ## Release History
 
+* 0.1.8 November/2019 - Fix jars Golo directory
 * 0.1.8 November/2019 - Change "preferGlobal" to false in package.json
 * 0.1.7 November/2019 - Runner implementation to ice project
 * 0.1.5 November/2019 - Adcionando os jars do Golo Lang para o plugin
