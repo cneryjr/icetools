@@ -1,6 +1,6 @@
 {
     "name": "icetools",
-    "version": "0.1.7",
+    "version": "0.1.8",
     "author": "Nery Jr",
     "description": "An awesome transpiler from Javascript to Golo lang",
     "main": "./lib/index.js",
@@ -15,7 +15,7 @@
         "url": "git+https://github.com/cneryjr/icetools.git"
     },
     "homepage": "https://github.com/cneryjr/icetools#readme",
-    "preferGlobal": true,
+    "preferGlobal": false,
     "license": "MIT",
     "dependencies": {
         "@babel/plugin-syntax-optional-chaining": "^7.2.0",

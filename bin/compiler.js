@@ -105,7 +105,7 @@ exports.compiler = (projectDir) => {
     let projectName = iceberg.name.replace(/\s/g, '_')
     let jarFileName = `${binDir}${path.sep}${projectName}.jar`
     let iceFiles = walkSync('.ice', sourceDir)
-    let updateJarCmd = `jar -ufm ${jarFileName} ${binDir}${path.sep}MANIFEST.MF`  
+    let updateJarCmd = `jar -ufm ${jarFileName} ${binDir}${path.sep}MANIFEST.MF > nul 2>&1`  
     const wait = ms => new Promise(resolve => setTimeout(resolve, ms))
         
     deleteBinDir(projectDir)
@@ -118,9 +118,9 @@ exports.compiler = (projectDir) => {
     const id = setInterval(function() {
         let goloFiles = walkSync('.golo', tmpDir)
 
-        if (goloFiles.length > 0) {
+        if (goloFiles.length > 0) {            
             let compileCmd = goloFiles.reduce((prev, curr) => `${prev} ${curr}`, `golo compile --output ${jarFileName}`)
-        
+            
             // console.log('\n', compileCmd, '\n')        
             execSync(compileCmd)
             execSync(updateJarCmd)
