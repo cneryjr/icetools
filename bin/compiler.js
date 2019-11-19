@@ -59,18 +59,6 @@ const transpile = (rootModule, sourceDir, inputFileName, targetDir) => {
         let output = generate(ast, { /* options */
             retainLines: false
         }, src)
-
-        // let writeStream = fs.createWriteStream(outputFileName)
-        
-        // writeStream.write(`module ${rootModule}${[''].concat(dirs).join('.')}.${className}\n`)
-        // output.code.split('\n').forEach( line => writeStream.write(line.replace(/\;$/g, '') + '\n') )
-        // writeStream.end();
-        
-        //  writeStream.on('close', function() {
-            //     console.log("### CLOSE ###############");
-            //     console.log('DIR FILES =>', fs.readdirSync('C:\\work\\nery\\ice.poc\\test\\bin\\main'))
-            // });
-            
             
         let sizeFile = 0
         // fs.unlinkSync(outputFileName);
@@ -94,12 +82,6 @@ const transpile = (rootModule, sourceDir, inputFileName, targetDir) => {
         //     console.log('DIR FILES =>', fs.readdirSync('C:\\work\\nery\\ice.poc\\test\\bin\\main'))
         // })
         fs.closeSync(fd)
-
-        // return closeFile(fd)
-
-        // console.log('\n---------------------------------------------------------------')
-        // console.log(`module ${rootModule}${[''].concat(dirs).join('.')}.${className}\n`)
-        // console.log(output.code)
     })
 }
 
@@ -107,11 +89,7 @@ function getGoloFiles(tmpDir, timeout) {
     let goloFiles = walkSync('.golo', tmpDir)
 
     const id = setInterval(function() {
-        // const file = path;
-        // const fileExists = fs.existsSync(file);
         goloFiles = walkSync('.golo', tmpDir)
-
-        // console.log('count: ', goloFiles.length)
 
         if (goloFiles.length > 0) {
             clearInterval(id);
@@ -120,8 +98,6 @@ function getGoloFiles(tmpDir, timeout) {
 }
 
 exports.compiler = (projectDir) => {
-    // let args = process.argv.slice(2)
-    // let projectDir = (args[0] || '.').replace(/[\/\\]$/, '')
     let binDir = `${projectDir}${path.sep}bin`
     let tmpDir = `${projectDir}${path.sep}bin${path.sep}tmp`
     let sourceDir = `${projectDir}${path.sep}src`

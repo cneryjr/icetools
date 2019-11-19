@@ -2,7 +2,7 @@
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-const mylib = require('../lib/index.js')
+// const mylib = require('../lib/index.js')
 
 exports.runner = (prjDir) => {
     let sep = (process.platform == 'win32' || process.platform == 'win64') ? ';' : ':'
