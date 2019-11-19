@@ -19,7 +19,6 @@ Where <action> is one of:
     --init       Set up the the ice project in current directory
     --run        Execute current project
 
-
 ## Release History
 
 * 0.1.8 November/2019 - Change "preferGlobal" to false in package.json
